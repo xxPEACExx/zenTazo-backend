@@ -13,16 +13,41 @@ public class Persons {
 
     private String sureName;
 
-    public Persons(int id,String name,String sureName){
+    private String nationality;
+
+    private int vaccination;
+
+
+
+    public Persons(int id,String name,String sureName,String nationality,int vaccination){
 
         this.id = id;
         this.name = name;
         this.sureName = sureName;
+        this.nationality = nationality;
+        this.vaccination = vaccination;
+
 
     }
 
     public Persons(){
 
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public int getVaccination() {
+        return vaccination;
+    }
+
+    public void setVaccination(int vaccination) {
+        this.vaccination = vaccination;
     }
 
     public int getId() {

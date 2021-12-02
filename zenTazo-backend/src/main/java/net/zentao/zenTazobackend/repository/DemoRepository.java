@@ -6,6 +6,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface DemoRepository extends JpaRepository<Demo,Integer> {
@@ -16,6 +17,10 @@ public interface DemoRepository extends JpaRepository<Demo,Integer> {
     List<Demo> findAll();
 
     List<Demo> findById(int id);
+
+    List<Demo>  findByName(String name);
+
+    ArrayList<Demo> findBySname(String sname);
 
 
 

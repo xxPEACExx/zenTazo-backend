@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -32,6 +33,23 @@ public class DemoController {
 
 
         return demoRepository.findById(id);
+
+    }
+
+    @GetMapping("/name/{name}")
+    public List<Demo> getName(@PathVariable String name){
+
+        return demoRepository.findByName(name);
+
+    }
+
+    @GetMapping("/surename/{sname}")
+    public ArrayList<Demo> getSureName(@PathVariable String sname){
+
+
+        ArrayList kati = demoRepository.findBySname(sname);
+        kati.toString();
+        return kati;
 
     }
 //
